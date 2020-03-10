@@ -1,0 +1,15 @@
+# How to load data?
+
+import numpy as np
+variable = np.load("filename")
+
+# example 1
+compressed64 = np.load("compressed64_50k_seismic.npy")
+# here, we load a npy file which contains an numpy array
+# the loaded data "compressed64" have 50000 time series, each one have 64 float values.
+
+# example 2
+reconstructed64 = np.load("reconstructed_64to256_50k_seismic.npy")
+# the loaded data "reconstructed64" have 50000 time series, each one have 256 float values which have been reconstructed from the "compressed64" by using inverse discrete wavelet transformation.
+
+
